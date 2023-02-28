@@ -5,3 +5,5 @@
 # gra
 # Enter a string: Hi!
 # !iH
+s = input("Enter a string: ")
+print(s[::-1])
