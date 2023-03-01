@@ -79,3 +79,23 @@ print(discounted_prices)
 # Create a dictionary with discounted price (10%) using dictionary comprehension
 discounted_prices2 = {k: 0.9*fruit_prices[k] for k in fruit_prices}
 print(discounted_prices2)
+
+#%% Using Pickle to store data into file
+import pickle
+data_dict = {}
+ans = 'y'
+while ans in ('y', 'Y'):
+    name = input("Enter name: ")
+    age = input("Enter age: ")
+    data_dict[name] = age
+    ans = input("Do you want to enter another data (y/n)? ")
+print(data_dict)
+with open('name_age.pkl', 'wb') as f:
+    pickle.dump(data_dict, f)
+
+#%% Using Pickle to load data from file
+import pickle
+with open('name_age.pkl', 'rb') as f:
+    mydata = pickle.load(f)
+print(mydata)
+
