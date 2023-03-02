@@ -85,3 +85,26 @@ print(f"{max(paper_size)=}")
 print(f"{max(paper_size, key=lambda x: -int(x[1]))=}")
 
 print(f"{min(paper_size, key=lambda x: -int(x[1]))=}")
+
+#%% map() example
+
+alist = list(range(1, 11))
+
+# Use map()
+sqr1 = list(map(lambda x: x*x, alist))
+print(f"{sqr1=}")
+
+# Use list comprehension
+sqr2 = [x*x for x in alist]
+print(f"{sqr2=}")
+
+#%% filter() example
+alist = ['bell', 'apple', 'pear', 'orange']
+
+# Use filter()
+blist = list(filter(lambda s:s[0] in 'aeiou', alist))
+print(f"{blist=}")
+
+# Use list comprehension
+clist = [s for s in alist if s[0] in 'aeiou']
+print(f"{clist=}")
