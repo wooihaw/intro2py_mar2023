@@ -14,7 +14,7 @@ def convert_far_to_cel(F):
 
 
 f = float(input("Enter a temperature in degrees Fahrenheit: "))
-print(f"The temperature in degree Celsius is {convert_far_to_cel(f)}")
+print(f"The temperature in degree Celsius is {convert_far_to_cel(f):.2f}")
 
 c = float(input("Enter a temperature in degrees Celsius: "))
-print(f"The temperature in degree Fahrenheit is {convert_cel_to_far(c)}")
+print(f"The temperature in degree Fahrenheit is {convert_cel_to_far(c):.2f}")
